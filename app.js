@@ -3,7 +3,6 @@ const fs = require('fs');
 const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3002;
-const PORT = 3002;
 const blogsPath = path.join(__dirname, 'data', 'blogs.json');
 
 app.use(express.static(path.join(__dirname, 'public')));
