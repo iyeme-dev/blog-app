@@ -2,17 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const app = express();
-const path = require('path');
-
-// Serve static files from 'public'
-app.use(express.static(path.join(__dirname, 'public')));
-
-// Serve index.html on root
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-
-
+const PORT = process.env.PORT || 3002;
 const PORT = 3002;
 const blogsPath = path.join(__dirname, 'data', 'blogs.json');
 
